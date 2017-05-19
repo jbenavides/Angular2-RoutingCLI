@@ -25,11 +25,11 @@ import { MessageModule } from './messages/message.module';
   imports: [
     BrowserModule,
     HttpModule,
-    AppRoutingModule,
     InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
     ProductModule,
     UserModule,
-    MessageModule
+    MessageModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

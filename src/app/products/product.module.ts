@@ -10,10 +10,12 @@ import { ProductFilterPipe } from './product-filter.pipe';
 import { ProductGuard } from './product.guard';
 import { ProductResolverService } from './product-resolver.service';
 import { SharedModule } from 'app/shared/shared.module';
+import { ProductRoutingModule } from 'app/products/product-routing.module';
 
 @NgModule({
   imports: [
-    SharedModule
+    SharedModule,
+    ProductRoutingModule
   ],
   declarations: [
     ProductDetailComponent,

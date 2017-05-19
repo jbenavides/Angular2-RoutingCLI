@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'app/user/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,12 @@ import { AuthService } from 'app/user/auth.service';
 export class AppComponent {
   pageTitle: string = 'Acme Product Management';
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService,
+              private router: Router) { }
 
   logOut(): void {
         this.authService.logout();
         console.log('Log out');
+        this.router.navigateByUrl('/welcome');
   }
 }

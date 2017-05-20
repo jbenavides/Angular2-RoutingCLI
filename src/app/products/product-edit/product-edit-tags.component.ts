@@ -11,11 +11,14 @@ export class ProductEditTagsComponent implements OnInit {
 
   errorMessage: string;
   newTags = '';
-  product = { id: 1, category: 'test', tags: ['test']};
+  product: IProduct;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.parent.data.subscribe(data => {
+      this.product = data['product'];
+    });
   }
 
   // Add the defined tags

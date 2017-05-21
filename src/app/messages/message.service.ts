@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 export class MessageService {
 
   private messages: string[] = [];
+  isDisplayed = false;
 
   addMessage(message: string): void {
         let currentDate = new Date();

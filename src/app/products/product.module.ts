@@ -7,7 +7,7 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductEditTagsComponent } from './product-edit/product-edit-tags.component';
 import { ProductEditInfoComponent } from './product-edit/product-edit-info.component';
 import { ProductFilterPipe } from './product-filter.pipe';
-import { ProductGuard } from './product.guard';
+import { ProductEditGuard } from './product-edit/product.guard';
 import { ProductResolver } from './product-resolver.service';
 import { SharedModule } from 'app/shared/shared.module';
 import { ProductRoutingModule } from 'app/products/product-routing.module';
@@ -27,7 +27,7 @@ import { ProductRoutingModule } from 'app/products/product-routing.module';
   ],
   providers: [
     ProductService,
-    ProductGuard,
+    ProductEditGuard,
     ProductResolver
   ]
 })

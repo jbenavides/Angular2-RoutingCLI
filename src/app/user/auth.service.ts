@@ -6,6 +6,7 @@ import { IUser } from 'app/user/user';
 export class AuthService {
 
   currentUser: IUser;
+  redirectUrl: string;
 
   constructor(private messageService: MessageService) { }
 

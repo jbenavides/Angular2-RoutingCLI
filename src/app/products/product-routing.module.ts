@@ -6,10 +6,13 @@ import { ProductEditComponent } from 'app/products/product-edit/product-edit.com
 import { ProductResolver } from './product-resolver.service';
 import { ProductEditInfoComponent } from 'app/products/product-edit/product-edit-info.component';
 import { ProductEditTagsComponent } from 'app/products/product-edit/product-edit-tags.component';
+import { AuthGuard } from '../user/auth.guard';
+import { ProductEditGuard } from 'app/products/product-edit/product.guard';
 
 const routes: Routes = [
   {
     path: 'products',
+    canActivate: [AuthGuard],
     children: [
       {
         path: '',
@@ -23,6 +26,7 @@ const routes: Routes = [
       {
         path: ':id/edit',
         component: ProductEditComponent,
+        canDeactivate: [ProductEditGuard],
         resolve: { product: ProductResolver },
         children: [
                     { path: '', redirectTo: 'info', pathMatch: 'full' },

@@ -12,7 +12,6 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ProductData } from './products/product-data';
 
 /* Feature Modules */
-import { ProductModule } from './products/product.module';
 import { UserModule } from './user/user.module';
 import { MessageModule } from './messages/message.module';
 
@@ -26,7 +25,6 @@ import { MessageModule } from './messages/message.module';
     BrowserModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
-    ProductModule,
     UserModule,
     MessageModule,
     AppRoutingModule

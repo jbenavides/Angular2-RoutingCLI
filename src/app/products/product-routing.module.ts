@@ -10,10 +10,10 @@ import { AuthGuard } from '../user/auth.guard';
 import { ProductEditGuard } from 'app/products/product-edit/product.guard';
 
 const routes: Routes = [
-  {
+  /*{
     path: 'products',
     canActivate: [AuthGuard],
-    children: [
+    children: [*/
       {
         path: '',
         component: ProductListComponent
@@ -34,8 +34,8 @@ const routes: Routes = [
                     { path: 'tags', component: ProductEditTagsComponent }
                   ]
       }
-    ]
-  },
+    /*]
+  },*/
 ];
 
 @NgModule({
